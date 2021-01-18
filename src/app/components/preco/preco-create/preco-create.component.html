@@ -1,28 +1,28 @@
 <mat-card>
-    <mat-card-title>Nova Vigência</mat-card-title>
+    <mat-card-title>Ticket</mat-card-title>
     <form>
         <div>
             <mat-form-field appearance="outline">
-                <mat-label>Inicio da Vigência</mat-label>
-                <input required matInput [matDatepicker]="vigenciaInicial" matInput [(ngModel)]="financeiro.vigenciaInicial" [ngModelOptions]="{standalone: true}">
-                <mat-datepicker-toggle matSuffix [for]="vigenciaInicial"></mat-datepicker-toggle>
-                <mat-datepicker #vigenciaInicial></mat-datepicker>
+                <mat-label>Hora de Entrada</mat-label>
+                <input required matInput [matDatepicker]="horaEntrada" matInput [(ngModel)]="financeiro.horaEntrada" [ngModelOptions]="{standalone: true}">
+                <mat-datepicker-toggle matSuffix [for]="horaEntrada"></mat-datepicker-toggle>
+                <mat-datepicker #horaEntrada></mat-datepicker>
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field appearance="outline">
-                <mat-label>Final da Vigência</mat-label>
-                <input required matInput [matDatepicker]="vigenciaFinal" matInput [(ngModel)]="financeiro.vigenciaFinal" [ngModelOptions]="{standalone: true}">
-                <mat-datepicker-toggle matSuffix [for]="vigenciaFinal"></mat-datepicker-toggle>
-                <mat-datepicker #vigenciaFinal></mat-datepicker>
+                <mat-label>Hora de Saída</mat-label>
+                <input required matInput [matDatepicker]="horaSaida" matInput [(ngModel)]="financeiro.horaSaida" [ngModelOptions]="{standalone: true}">
+                <mat-datepicker-toggle matSuffix [for]="horaSaida"></mat-datepicker-toggle>
+                <mat-datepicker #horaSaida></mat-datepicker>
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field appearance="outline">
-                <mat-label>Valor da Hora</mat-label>
-                <input required type="number" matInput [(ngModel)]="financeiro.valorHora" [ngModelOptions]="{standalone: true}" />
+                <mat-label>Valor Total</mat-label>
+                <input required type="number" matInput [(ngModel)]="financeiro.valorTotal" [ngModelOptions]="{standalone: true}" />
             </mat-form-field>
         </div>
 

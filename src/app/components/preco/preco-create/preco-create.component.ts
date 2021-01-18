@@ -13,9 +13,9 @@ import { FinanceiroService } from 'src/app/services/preco.service';
 export class FinanceiroCreateComponent implements OnInit {
 
   financeiro: Financeiro = {
-    vigenciaInicial: null,
-    vigenciaFinal: null,
-    valorHora: null,
+    horaEntrada: null,
+    horaSaida: null,
+    valorTotal: null,
   }
 
   constructor(
@@ -29,7 +29,7 @@ export class FinanceiroCreateComponent implements OnInit {
 
   cadastrarPreco(): void {
     this.financeiroServico.post(this.financeiro).subscribe(() => {
-      this.mensagemServico.showMessage('Vigencia cadastrada com sucesso!');
+      this.mensagemServico.showMessage('Ticket cadastrado com sucesso!');
       this.router.navigate(['/precos']);
     });
   }

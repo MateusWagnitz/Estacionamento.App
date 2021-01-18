@@ -12,7 +12,8 @@ export class PrecoReadComponent implements OnInit {
   financeiro: Financeiro[];
 
   // displayedColumns = ['id', 'vigenciaInicial', 'vigenciaFinal', 'valorHora' , 'acoes'];
-  displayedColumns = ['id', 'vigenciaInicial', 'vigenciaFinal', 'valorHora' ];
+  //displayedColumns = ['id', 'vigenciaInicial', 'vigenciaFinal', 'valorHora' ];
+  displayedColumns = ['TicketId', 'horaEntrada', 'horaSaida', 'valorTotal' ];
 
   constructor(
     private financeiroServico: FinanceiroService
