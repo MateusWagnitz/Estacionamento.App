@@ -28,7 +28,7 @@ export class VeiculoDeleteComponent implements OnInit {
   }
 
   apagarVeiculo(): void {
-    this.veiculoServico.delete(this.veiculo.id).subscribe(() => {
+    this.veiculoServico.delete(this.veiculo.carroId).subscribe(() => {
       this.mensagemServico.showMessage('Veículo excluido com sucesso!');
 
       this.router.navigate(['/carros']);

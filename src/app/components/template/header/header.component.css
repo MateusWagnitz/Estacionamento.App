@@ -1,13 +1,14 @@
 .header {
     display: flex;
     align-items: center;
+    background-color: rgba(27, 27, 26, 0.884);
 }
 
 .header a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #333;
+    color: rgb(255, 255, 255);
 }
 
 .header .logo {

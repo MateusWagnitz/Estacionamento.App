@@ -60,7 +60,7 @@ export class VeiculoUpdateComponent implements OnInit {
 
   atualizarVeiculo(): void {
     this.veiculoServico.put(this.veiculo).subscribe(() => {
-      this.mensagemServico.showMessage('Veículo atualizado com sucesso!');
+      this.mensagemServico.showMessage('Carro atualizado com sucesso!');
 
       this.router.navigate(['/carros']);
     });

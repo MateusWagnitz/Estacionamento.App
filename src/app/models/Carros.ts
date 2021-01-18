@@ -1,11 +1,11 @@
 export class Carros {
-  id?: number;
+  carroId?: number;
   placa: string;
   marca: string;
   modelo: string;
 
   constructor (){
-    this.id = 0;
+    this.carroId = 0;
     this.placa = '';
     this.marca = '';
     this.modelo = '';

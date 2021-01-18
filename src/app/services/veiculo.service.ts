@@ -34,8 +34,8 @@ export class VeiculoService {
   //   );
   // }
 
-  getById(id: number): Observable<Carros> {
-    const url = `${this.baseURL}/id=${id}`;
+  getById(carroId: number): Observable<Carros> {
+    const url = `${this.baseURL}/id=${carroId}`;
     console.log(url);
     return this.http.get<Carros>(url).pipe(
       map((obj) => obj),
@@ -53,7 +53,7 @@ export class VeiculoService {
   }
 
   put(veiculo: Carros): Observable<Carros> {
-    const url = `${this.baseURL}/${veiculo.id}`;
+    const url = `${this.baseURL}/${veiculo.carroId}`;
     return this.http.put<Carros>(url, veiculo).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -67,8 +67,8 @@ export class VeiculoService {
     );
   }
 
-  delete(id: number): Observable<Carros> {
-    const url = `${this.baseURL}/${id}`;
+  delete(carroId: number): Observable<Carros> {
+    const url = `${this.baseURL}/${carroId}`;
     console.log(url);
     return this.http.delete<Carros>(url).pipe(
       map((obj) => obj),

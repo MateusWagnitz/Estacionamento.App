@@ -25,8 +25,8 @@ export class FinanceiroService {
     );
   }
 
-  getById(id: number): Observable<Financeiro> {
-    const url = `${this.baseURL}/${id}`;
+  getById(ticketId: number): Observable<Financeiro> {
+    const url = `${this.baseURL}/${ticketId}`;
     return this.http.get<Financeiro>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -34,7 +34,7 @@ export class FinanceiroService {
   }
 
   put(financeiro: Financeiro): Observable<Financeiro> {
-    const url = `${this.baseURL}/${financeiro.id}`;
+    const url = `${this.baseURL}/${financeiro.ticketId}`;
     return this.http.put<Financeiro>(url, financeiro).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -48,8 +48,8 @@ export class FinanceiroService {
     );
   }
 
-  delete(id: number): Observable<Financeiro> {
-    const url = `${this.baseURL}/${id}`;
+  delete(ticketId: number): Observable<Financeiro> {
+    const url = `${this.baseURL}/${ticketId}`;
     return this.http.delete<Financeiro>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -60,13 +60,11 @@ export class FinanceiroService {
     console.log(e);
     if (e.status === 409)
     {
-      this.mensagemServico.showMessage('Esta data já está sendo usada como vigência', true);
-    }
-    else
-    {
       this.mensagemServico.showMessage('Ocorreu um erro com o módulo Financeiro!', true);
+    }else
+    {
+      return EMPTY;
     }
-    return EMPTY;
   }
 
 }
