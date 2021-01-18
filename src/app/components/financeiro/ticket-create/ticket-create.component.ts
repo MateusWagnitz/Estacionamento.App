@@ -3,7 +3,7 @@ import { Financeiro } from 'src/app/models/Financeiro';
 import { Router } from '@angular/router';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { FinanceiroService } from 'src/app/services/preco.service';
+import { FinanceiroService } from 'src/app/services/financeiro.service';
 
 @Component({
   selector: 'app-ticket-create',

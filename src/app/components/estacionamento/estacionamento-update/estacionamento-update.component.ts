@@ -4,7 +4,7 @@ import { Carros } from 'src/app/models/Carros';
 import { Financeiro } from 'src/app/models/Financeiro';
 import { EstacionamentoService } from 'src/app/services/estacionamento.service';
 import { VeiculoService } from 'src/app/services/veiculo.service';
-import { FinanceiroService } from 'src/app/services/preco.service';
+import { FinanceiroService } from 'src/app/services/financeiro.service';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { formatDate } from '@angular/common';

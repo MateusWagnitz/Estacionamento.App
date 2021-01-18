@@ -1,5 +1,5 @@
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { FinanceiroService } from './../../../services/preco.service';
+import { FinanceiroService } from '../../../services/financeiro.service';
 import { VeiculoService } from './../../../services/veiculo.service';
 import { Financeiro } from 'src/app/models/Financeiro';
 import { Carros } from '../../../models/Carros';

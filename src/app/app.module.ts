@@ -26,8 +26,8 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 
 import { FinanceiroComponent } from './views/financeiro/ticket.component';
-import { PrecoReadComponent } from './components/preco/ticket-read/ticket-read.component';
-import { FinanceiroCreateComponent } from './components/preco/ticket-create/ticket-create.component';
+import { TicketReadComponent } from './components/financeiro/ticket-read/ticket-read.component';
+import { FinanceiroCreateComponent } from './components/financeiro/ticket-create/ticket-create.component';
 
 import { VeiculoComponent } from './views/veiculo/veiculo.component';
 import { VeiculoReadComponent } from './components/veiculo/veiculo-read/veiculo-read.component';
@@ -51,7 +51,7 @@ import { EstacionamentoUpdateComponent } from './components/estacionamento/estac
     HomeComponent,
 
     FinanceiroComponent,
-    PrecoReadComponent,
+    TicketReadComponent,
     FinanceiroCreateComponent,
 
     VeiculoComponent,
