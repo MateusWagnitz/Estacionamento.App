@@ -25,9 +25,9 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 
-import { FinanceiroComponent } from './views/preco/preco.component';
-import { PrecoReadComponent } from './components/preco/preco-read/preco-read.component';
-import { FinanceiroCreateComponent } from './components/preco/preco-create/preco-create.component';
+import { FinanceiroComponent } from './views/financeiro/ticket.component';
+import { PrecoReadComponent } from './components/preco/ticket-read/ticket-read.component';
+import { FinanceiroCreateComponent } from './components/preco/ticket-create/ticket-create.component';
 
 import { VeiculoComponent } from './views/veiculo/veiculo.component';
 import { VeiculoReadComponent } from './components/veiculo/veiculo-read/veiculo-read.component';

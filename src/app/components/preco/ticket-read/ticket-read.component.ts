@@ -3,16 +3,14 @@ import { Financeiro } from 'src/app/models/Financeiro';
 import { FinanceiroService } from 'src/app/services/preco.service';
 
 @Component({
-  selector: 'app-preco-read',
-  templateUrl: './preco-read.component.html',
-  styleUrls: ['./preco-read.component.scss']
+  selector: 'app-ticket-read',
+  templateUrl: './ticket-read.component.html',
+  styleUrls: ['./ticket-read.component.scss']
 })
 export class PrecoReadComponent implements OnInit {
 
   financeiro: Financeiro[];
 
-  // displayedColumns = ['id', 'vigenciaInicial', 'vigenciaFinal', 'valorHora' , 'acoes'];
-  //displayedColumns = ['id', 'vigenciaInicial', 'vigenciaFinal', 'valorHora' ];
   displayedColumns = ['TicketId', 'horaEntrada', 'horaSaida', 'valorTotal' ];
 
   constructor(

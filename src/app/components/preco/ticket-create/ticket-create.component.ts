@@ -6,9 +6,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { FinanceiroService } from 'src/app/services/preco.service';
 
 @Component({
-  selector: 'app-preco-create',
-  templateUrl: './preco-create.component.html',
-  styleUrls: ['./preco-create.component.scss']
+  selector: 'app-ticket-create',
+  templateUrl: './ticket-create.component.html',
+  styleUrls: ['./ticket-create.component.scss']
 })
 export class FinanceiroCreateComponent implements OnInit {
 
@@ -30,12 +30,12 @@ export class FinanceiroCreateComponent implements OnInit {
   cadastrarPreco(): void {
     this.financeiroServico.post(this.financeiro).subscribe(() => {
       this.mensagemServico.showMessage('Ticket cadastrado com sucesso!');
-      this.router.navigate(['/precos']);
+      this.router.navigate(['/ticket']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/precos']);
+    this.router.navigate(['/ticket']);
   }
 
 }

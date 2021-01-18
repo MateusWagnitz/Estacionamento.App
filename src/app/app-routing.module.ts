@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
 
-import { FinanceiroComponent } from './views/preco/preco.component';
-import { FinanceiroCreateComponent } from './components/preco/preco-create/preco-create.component';
+import { FinanceiroComponent } from './views/financeiro/ticket.component';
+import { FinanceiroCreateComponent } from './components/preco/ticket-create/ticket-create.component';
 
 import { VeiculoComponent } from './views/veiculo/veiculo.component';
 import { VeiculoCreateComponent } from './components/veiculo/veiculo-create/veiculo-create.component';

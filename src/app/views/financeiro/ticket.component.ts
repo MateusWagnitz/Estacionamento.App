@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
-  selector: 'app-preco',
-  templateUrl: './preco.component.html',
-  styleUrls: ['./preco.component.scss']
+  selector: 'app-ticket',
+  templateUrl: './ticket.component.html',
+  styleUrls: ['./ticket.component.scss']
 })
 export class FinanceiroComponent implements OnInit {
 
@@ -16,7 +16,7 @@ export class FinanceiroComponent implements OnInit {
     headerService.headerData = {
       title: 'Tabela de Preços',
       icon: 'monetization_on',
-      routeUrl: '/precos'
+      routeUrl: '/financeiro'
     };
   }
 
@@ -24,7 +24,7 @@ export class FinanceiroComponent implements OnInit {
   }
 
   novoPreco(): void {
-    this.router.navigate(['/precos/create']);
+    this.router.navigate(['/financeiro/create']);
   }
 
 }
