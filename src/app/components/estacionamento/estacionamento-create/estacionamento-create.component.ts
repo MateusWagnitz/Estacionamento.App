@@ -25,7 +25,7 @@ export class EstacionamentoCreateComponent implements OnInit {
     entrada: null,
     saida: null,
     valorTotal: 0.0,
-    tabelaPrecoId: 0,
+    // tabelaPrecoId: 0,
     veiculoId: 0
   };
 
@@ -66,9 +66,9 @@ export class EstacionamentoCreateComponent implements OnInit {
     this.router.navigate(['/estacionamentos']);
   }
 
-  procurarData(): void {
-    console.log('ALTEROU!!!')
-    this.estacionamento.tabelaPrecoId = 1;
-  }
+  // procurarData(): void {
+  //   console.log('ALTEROU!!!')
+  //   this.estacionamento.tabelaPrecoId = 1;
+  // }
 
 }

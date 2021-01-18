@@ -20,18 +20,18 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Placa</mat-label>
                     <mat-select [(ngModel)]="estacionamento.veiculoId" name="placa" [disabled]="true">
-                        <mat-option *ngFor="let veiculo of veiculos" [value]="veiculo.id"> {{veiculo.placa}} </mat-option>
+                        <mat-option *ngFor="let veiculo of veiculos" [value]="veiculo.placa"> {{veiculo.placa}} </mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
 
             <div>
-                <mat-form-field appearance="outline">
-                    <mat-label>Valor Hora</mat-label>
+                <!-- <mat-form-field appearance="outline">
+                    <mat-label>Valor Total</mat-label>
                     <mat-select [(ngModel)]="estacionamento.tabelaPrecoId" [disabled]="true" name="valorHora">
-                        <mat-option *ngFor="let financeiro of financeiro" [value]="financeiro.id"> {{financeiro.valorHora}} </mat-option>
+                        <mat-option *ngFor="let financeiro of financeiro" [value]="financeiro.valorTotal"> {{financeiro.valorTotal}} </mat-option>
                     </mat-select>
-                </mat-form-field>
+                </mat-form-field> -->
 
                 <mat-form-field appearance="outline">
                     <mat-label>Valor Total</mat-label>

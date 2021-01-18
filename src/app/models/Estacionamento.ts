@@ -5,7 +5,7 @@ export class Estacionamento {
   entrada: Date;
   saida: Date;
   valorTotal: number;
-  tabelaPrecoId: number;
+  // tabelaPrecoId: number;
   veiculoId: number;
 
   constructor(){
@@ -13,7 +13,7 @@ export class Estacionamento {
     this.entrada = null;
     this.saida = null;
     this.valorTotal  = 0;
-    this.tabelaPrecoId = 0;
+    // this.tabelaPrecoId = 0;
     this.veiculoId = 0;
   }
 }

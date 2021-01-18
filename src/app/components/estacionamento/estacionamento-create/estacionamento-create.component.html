@@ -1,13 +1,13 @@
 <mat-card>
     <mat-card-title>Nova Entrada</mat-card-title>
     <form>
-        <div>
+        <!-- <div>
             <mat-form-field appearance="outline">
-                <mat-label>Entrada</mat-label>
+                <mat-label>Entrada</mat-label> -->
                 <!-- <input matInput type="datetime-local" matInput [(ngModel)]="estacionamento.entrada" [ngModelOptions]="{standalone: true}" /> -->
-                <input matInput type="datetime-local" (change)="procurarData()" matInput [(ngModel)]="estacionamento.entrada" [ngModelOptions]="{standalone: true}" />
+                <!-- <input matInput type="datetime-local" (change)="procurarData()" matInput [(ngModel)]="estacionamento.entrada" [ngModelOptions]="{standalone: true}" />
             </mat-form-field>
-        </div>
+        </div> -->
 
         <div>
             <mat-form-field appearance="outline">
@@ -34,18 +34,18 @@
             <mat-form-field appearance="outline">
                 <mat-label>Placa</mat-label>
                 <mat-select [(ngModel)]="estacionamento.veiculoId" name="placa">
-                    <mat-option *ngFor="let veiculo of veiculos" [value]="veiculo.id"> {{veiculo.placa}} </mat-option>
+                    <mat-option *ngFor="let veiculo of veiculos" [value]="veiculo.carroId"> {{veiculo.placa}} </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>Valor Hora</mat-label>
+        <!-- <div> -->
+            <!-- <mat-form-field appearance="outline">
+                <mat-label>Valor Total</mat-label>
                 <mat-select [(ngModel)]="estacionamento.tabelaPrecoId" name="preco">
-                    <mat-option *ngFor="let financeiro of financeiro" [value]="financeiro.id"> {{financeiro.valorHora}} </mat-option>
+                    <mat-option *ngFor="let financeiro of financeiro" [value]="financeiro.valorTotal"> {{financeiro.valorTotal}} </mat-option>
                 </mat-select>
-            </mat-form-field>
-        </div>
+            </mat-form-field> -->
+        <!-- </div> -->
         <!-- <div>
             <mat-form-field appearance="outline">
                 <mat-label>Valor Total</mat-label>
