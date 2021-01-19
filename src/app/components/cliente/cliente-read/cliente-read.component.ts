@@ -13,7 +13,7 @@ export class ClienteReadComponent implements OnInit {
 
   // displayedColumns = ['id', 'placa', 'entradaData', 'entradaHora', 'saidaData', 'saidaHora', 'valorHora', 'valotTotal', 'acoes'];
 
-  displayedColumns = ['placa', 'entrada', 'saida', 'valorHora', 'valorTotal', 'acoes'];
+  displayedColumns = ['placa', 'entrada', 'saida',  'valorTotal', 'acoes'];
 
   constructor(
     private clienteServico: ClienteService

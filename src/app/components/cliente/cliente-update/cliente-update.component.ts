@@ -21,7 +21,7 @@ export class ClienteUpdateComponent implements OnInit {
   cliente: Cliente;
 
   dataSaida: Date = new Date();
-  valorHora: number;
+
 
   constructor(
     private clienteServico: ClienteService,

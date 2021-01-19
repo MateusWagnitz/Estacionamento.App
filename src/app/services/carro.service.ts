@@ -11,7 +11,7 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class CarroService {
 
-  baseURL = `${environment.mainUrlAPI}carro`;
+  baseURL = `${environment.mainUrlAPI}carros`;
 
   constructor(
     private http: HttpClient,

@@ -60,14 +60,14 @@ export class CarroCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  cadastrarCarro(): void {
+  CadastrarCarro(): void {
     this.carroServico.post(this.carro).subscribe(() => {
       this.mensagemServico.showMessage('Carro cadastrado com sucesso!');
       this.router.navigate(['/carros']);
     });
   }
 
-  cancelar(): void {
+  Cancelar(): void {
     this.router.navigate(['/carros']);
   }
 

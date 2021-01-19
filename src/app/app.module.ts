@@ -88,7 +88,7 @@ import { TicketUpdateComponent } from './components/financeiro/ticket-update/tic
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
   providers: [
     MatFormFieldModule,
