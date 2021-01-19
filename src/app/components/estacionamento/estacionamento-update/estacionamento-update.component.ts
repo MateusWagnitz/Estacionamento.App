@@ -44,7 +44,7 @@ export class EstacionamentoUpdateComponent implements OnInit {
   }
 
   carregarCarros(): void {
-    this.carroServico.getAll().subscribe(prob => {
+    this.carroServico.Get().subscribe(prob => {
       this.carros = prob;
     });
   }

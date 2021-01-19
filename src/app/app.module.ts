@@ -40,6 +40,7 @@ import { EstacionamentoReadComponent } from './components/estacionamento/estacio
 import { EstacionamentoCreateComponent } from './components/estacionamento/estacionamento-create/estacionamento-create.component';
 import { EstacionamentoDeleteComponent } from './components/estacionamento/estacionamento-delete/estacionamento-delete.component';
 import { EstacionamentoUpdateComponent } from './components/estacionamento/estacionamento-update/estacionamento-update.component';
+import { TicketDeleteComponent } from './components/financeiro/ticket-delete/ticket-delete.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { EstacionamentoUpdateComponent } from './components/estacionamento/estac
     EstacionamentoCreateComponent,
     EstacionamentoDeleteComponent,
     EstacionamentoUpdateComponent,
+    TicketDeleteComponent,
   ],
   imports: [
     BrowserModule,

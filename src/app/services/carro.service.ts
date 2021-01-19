@@ -18,7 +18,7 @@ export class CarroService {
     private mensagemServico: MensagemService
   ) { }
 
-  getAll(): Observable<Carros[]> {
+  Get(): Observable<Carros[]> {
     return this.http.get<Carros[]>(this.baseURL).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -26,7 +26,7 @@ export class CarroService {
   }
 
 
-  getById(carroId: number): Observable<Carros> {
+  BuscaId(carroId: number): Observable<Carros> {
     const url = `${this.baseURL}/id=${carroId}`;
     console.log(url);
     return this.http.get<Carros>(url).pipe(

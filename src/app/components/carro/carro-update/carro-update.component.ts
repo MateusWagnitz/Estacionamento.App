@@ -53,7 +53,7 @@ export class CarroUpdateComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.carroServico.getById(id).subscribe((carro) => {
+    this.carroServico.BuscaId(id).subscribe((carro) => {
       this.carro = carro;
     });
   }

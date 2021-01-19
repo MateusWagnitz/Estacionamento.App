@@ -18,7 +18,7 @@ export class CarroReadComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.carroServico.getAll().subscribe(carros => {
+    this.carroServico.Get().subscribe(carros => {
       this.carros = carros;
       console.log(carros);
     });
