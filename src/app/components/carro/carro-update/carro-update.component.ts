@@ -1,6 +1,6 @@
 import { Carros } from '../../../models/Carros';
 import { Component, OnInit } from '@angular/core';
-import { VeiculoService } from 'src/app/services/veiculo.service';
+import { CarroService } from 'src/app/services/carro.service';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
@@ -11,14 +11,14 @@ interface Carro {
 }
 
 @Component({
-  selector: 'app-veiculo-update',
-  templateUrl: './veiculo-update.component.html',
-  styleUrls: ['./veiculo-update.component.scss']
+  selector: 'app-carro-update',
+  templateUrl: './carro-update.component.html',
+  styleUrls: ['./carro-update.component.scss']
 })
-export class VeiculoUpdateComponent implements OnInit {
+export class CarroUpdateComponent implements OnInit {
 
   marcaControl = new FormControl('', Validators.required);
-  veiculo: Carros;
+  carro: Carros;
 
   carros: Carro[] = [
     { value: 'Chevrolet', viewValue: 'Chevrolet' },
@@ -45,7 +45,7 @@ export class VeiculoUpdateComponent implements OnInit {
   ];
 
   constructor(
-    private veiculoServico: VeiculoService,
+    private carroServico: CarroService,
     private mensagemServico: MensagemService,
     private router: Router,
     private route: ActivatedRoute
@@ -53,13 +53,13 @@ export class VeiculoUpdateComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.veiculoServico.getById(id).subscribe((veiculo) => {
-      this.veiculo = veiculo;
+    this.carroServico.getById(id).subscribe((carro) => {
+      this.carro = carro;
     });
   }
 
-  atualizarVeiculo(): void {
-    this.veiculoServico.put(this.veiculo).subscribe(() => {
+  atualizarCarro(): void {
+    this.carroServico.put(this.carro).subscribe(() => {
       this.mensagemServico.showMessage('Carro atualizado com sucesso!');
 
       this.router.navigate(['/carros']);

@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
-  selector: 'app-veiculo',
-  templateUrl: './veiculo.component.html',
-  styleUrls: ['./veiculo.component.scss']
+  selector: 'app-carro',
+  templateUrl: './carro.component.html',
+  styleUrls: ['./carro.component.scss']
 })
-export class VeiculoComponent implements OnInit {
+export class CarroComponent implements OnInit {
 
   constructor(
     private router: Router,
@@ -16,15 +16,15 @@ export class VeiculoComponent implements OnInit {
     headerService.headerData = {
       title: 'Tabela de Veículos',
       icon: 'time_to_leave',
-      routeUrl: '/veiculos'
+      routeUrl: '/carros'
     };
   }
 
   ngOnInit() {
   }
 
-  novoVeiculo(): void {
-    this.router.navigate(['/veiculos/create']);
+  novoCarro(): void {
+    this.router.navigate(['/carros/create']);
   }
 
 }

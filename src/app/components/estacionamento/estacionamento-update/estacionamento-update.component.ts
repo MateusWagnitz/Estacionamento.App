@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Carros } from 'src/app/models/Carros';
 import { Financeiro } from 'src/app/models/Financeiro';
 import { EstacionamentoService } from 'src/app/services/estacionamento.service';
-import { VeiculoService } from 'src/app/services/veiculo.service';
+import { CarroService } from 'src/app/services/carro.service';
 import { FinanceiroService } from 'src/app/services/financeiro.service';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -16,7 +16,7 @@ import { formatDate } from '@angular/common';
 })
 export class EstacionamentoUpdateComponent implements OnInit {
 
-  veiculos: Carros[];
+  carros: Carros[];
   financeiro: Financeiro[];
   estacionamento: Estacionamento;
 
@@ -25,7 +25,7 @@ export class EstacionamentoUpdateComponent implements OnInit {
 
   constructor(
     private estacionamentoServico: EstacionamentoService,
-    private veiculoServico: VeiculoService,
+    private carroServico: CarroService,
     private financeiroServico: FinanceiroService,
     private mensagemServico: MensagemService,
     private router: Router,
@@ -39,17 +39,17 @@ export class EstacionamentoUpdateComponent implements OnInit {
       this.estacionamento.saida = this.dataSaida;
 
     });
-    this.carregarVeiculos();
-    this.carregarPrecos();
+    this.carregarCarros();
+    this.carregarFinanceiro();
   }
 
-  carregarVeiculos(): void {
-    this.veiculoServico.getAll().subscribe(prob => {
-      this.veiculos = prob;
+  carregarCarros(): void {
+    this.carroServico.getAll().subscribe(prob => {
+      this.carros = prob;
     });
   }
 
-  carregarPrecos(): void {
+  carregarFinanceiro(): void {
     this.financeiroServico.getAll().subscribe(prob => {
       this.financeiro = prob;
     });

@@ -27,7 +27,7 @@ export class FinanceiroCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  cadastrarPreco(): void {
+  cadastrarTicket(): void {
     this.financeiroServico.post(this.financeiro).subscribe(() => {
       this.mensagemServico.showMessage('Ticket cadastrado com sucesso!');
       this.router.navigate(['/ticket']);

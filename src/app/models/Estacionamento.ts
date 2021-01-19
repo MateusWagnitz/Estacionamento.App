@@ -5,15 +5,13 @@ export class Estacionamento {
   entrada: Date;
   saida: Date;
   valorTotal: number;
-  // tabelaPrecoId: number;
-  veiculoId: number;
+  carroId: number;
 
   constructor(){
     this.id = 0;
     this.entrada = null;
     this.saida = null;
     this.valorTotal  = 0;
-    // this.tabelaPrecoId = 0;
-    this.veiculoId = 0;
+    this.carroId = 0;
   }
 }

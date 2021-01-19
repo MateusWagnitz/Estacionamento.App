@@ -23,7 +23,7 @@ export class FinanceiroComponent implements OnInit {
   ngOnInit() {
   }
 
-  novoPreco(): void {
+  novoTicket(): void {
     this.router.navigate(['/financeiro/create']);
   }
 

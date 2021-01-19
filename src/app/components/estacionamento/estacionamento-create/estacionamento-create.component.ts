@@ -1,6 +1,6 @@
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { FinanceiroService } from '../../../services/financeiro.service';
-import { VeiculoService } from './../../../services/veiculo.service';
+import { CarroService } from '../../../services/carro.service';
 import { Financeiro } from 'src/app/models/Financeiro';
 import { Carros } from '../../../models/Carros';
 import { EstacionamentoService } from './../../../services/estacionamento.service';
@@ -17,7 +17,7 @@ import { formatDate } from '@angular/common';
 })
 export class EstacionamentoCreateComponent implements OnInit {
 
-  veiculos: Carros[];
+  carros: Carros[];
   financeiro: Financeiro[];
   dataEstrada: Date = new Date();
 
@@ -25,31 +25,29 @@ export class EstacionamentoCreateComponent implements OnInit {
     entrada: null,
     saida: null,
     valorTotal: 0.0,
-    // tabelaPrecoId: 0,
-    veiculoId: 0
+    carroId: 0
   };
 
   constructor(
     private estacionamentoServico: EstacionamentoService,
-    private veiculoServico: VeiculoService,
+    private carroServico: CarroService,
     private financeiroServico: FinanceiroService,
     private router: Router,
     private mensagemServico: MensagemService,
   ) { }
 
   ngOnInit() {
-    this.carregarPrecos();
-    this.carregarVeiculos();
-    //this.estacionamento.entrada = this.dataEstrada;
+    this.carregarTicket();
+    this.carregarCarros();
   }
 
-  carregarVeiculos(): void {
-    this.veiculoServico.getAll().subscribe(a => {
-      this.veiculos = a;
+  carregarCarros(): void {
+    this.carroServico.getAll().subscribe(a => {
+      this.carros = a;
     });
   }
 
-  carregarPrecos(): void {
+  carregarTicket(): void {
     this.financeiroServico.getAll().subscribe(a => {
       this.financeiro = a;
     });
@@ -66,9 +64,5 @@ export class EstacionamentoCreateComponent implements OnInit {
     this.router.navigate(['/estacionamentos']);
   }
 
-  // procurarData(): void {
-  //   console.log('ALTEROU!!!')
-  //   this.estacionamento.tabelaPrecoId = 1;
-  // }
 
 }

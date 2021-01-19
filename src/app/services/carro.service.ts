@@ -9,9 +9,9 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class VeiculoService {
+export class CarroService {
 
-  baseURL = `${environment.mainUrlAPI}veiculo`;
+  baseURL = `${environment.mainUrlAPI}carro`;
 
   constructor(
     private http: HttpClient,
@@ -25,14 +25,6 @@ export class VeiculoService {
     );
   }
 
-  // getById(id: number): Observable<Veiculo> {
-  //   const url = `${this.baseURL}/${id}`;
-  //   console.log(url);
-  //   return this.http.get<Veiculo>(url).pipe(
-  //     map((obj) => obj),
-  //     catchError((e) => this.errorHandler(e))
-  //   );
-  // }
 
   getById(carroId: number): Observable<Carros> {
     const url = `${this.baseURL}/id=${carroId}`;
@@ -52,16 +44,16 @@ export class VeiculoService {
     );
   }
 
-  put(veiculo: Carros): Observable<Carros> {
-    const url = `${this.baseURL}/${veiculo.carroId}`;
-    return this.http.put<Carros>(url, veiculo).pipe(
+  put(carro: Carros): Observable<Carros> {
+    const url = `${this.baseURL}/${carro.carroId}`;
+    return this.http.put<Carros>(url, carro).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  post(veiculo: Carros): Observable<Carros> {
-    return this.http.post<Carros>(this.baseURL, veiculo).pipe(
+  post(carro: Carros): Observable<Carros> {
+    return this.http.post<Carros>(this.baseURL, carro).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -78,7 +70,7 @@ export class VeiculoService {
 
   errorHandler(e: any): Observable<any> {
     console.log(e);
-    this.mensagemServico.showMessage('Ocorreu um erro com o módulo Veículo!', true);
+    this.mensagemServico.showMessage('Ocorreu um erro com o módulo Carro!', true);
     return EMPTY;
   }
 }

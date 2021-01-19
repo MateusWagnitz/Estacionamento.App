@@ -20,8 +20,8 @@
         <div>
             <mat-form-field appearance="outline">
                 <mat-label>Placa</mat-label>
-                <mat-select [(ngModel)]="estacionamento.veiculoId" name="placa">
-                    <mat-option *ngFor="let veiculo of veiculos" [value]="veiculo.carroId"> {{veiculo.placa}} </mat-option>
+                <mat-select [(ngModel)]="estacionamento.carroId" name="placa">
+                    <mat-option *ngFor="let carro of carros" [value]="carro.carroId"> {{carro.placa}} </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>

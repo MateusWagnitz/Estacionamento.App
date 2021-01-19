@@ -6,10 +6,10 @@ import { HomeComponent } from './views/home/home.component';
 import { FinanceiroComponent } from './views/financeiro/ticket.component';
 import { FinanceiroCreateComponent } from './components/financeiro/ticket-create/ticket-create.component';
 
-import { VeiculoComponent } from './views/veiculo/veiculo.component';
-import { VeiculoCreateComponent } from './components/veiculo/veiculo-create/veiculo-create.component';
-import { VeiculoDeleteComponent } from './components/veiculo/veiculo-delete/veiculo-delete.component';
-import { VeiculoUpdateComponent } from './components/veiculo/veiculo-update/veiculo-update.component';
+import { CarroComponent } from './views/carro/carro.component';
+import { CarroCreateComponent } from './components/carro/carro-create/carro-create.component';
+import { CarroDeleteComponent } from './components/carro/carro-delete/carro-delete.component';
+import { CarroUpdateComponent } from './components/carro/carro-update/carro-update.component';
 
 import { EstacionamentoComponent } from './views/estacionamento/estacionamento.component';
 import { EstacionamentoCreateComponent } from './components/estacionamento/estacionamento-create/estacionamento-create.component';
@@ -20,10 +20,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'financeiro', component: FinanceiroComponent },
   { path: 'financeiro/create', component: FinanceiroCreateComponent },
-  { path: 'veiculos', component: VeiculoComponent },
-  { path: 'veiculos/create', component: VeiculoCreateComponent },
-  { path: 'veiculos/delete/:id', component: VeiculoDeleteComponent },
-  { path: 'veiculos/update/:id', component: VeiculoUpdateComponent },
+  { path: 'carros', component: CarroComponent },
+  { path: 'carros/create', component: CarroCreateComponent },
+  { path: 'carros/delete/:id', component: CarroDeleteComponent },
+  { path: 'carros/update/:id', component: CarroUpdateComponent },
   { path: 'estacionamentos', component : EstacionamentoComponent },
   { path: 'estacionamentos/create', component: EstacionamentoCreateComponent },
   { path: 'estacionamentos/delete/:id', component: EstacionamentoDeleteComponent },

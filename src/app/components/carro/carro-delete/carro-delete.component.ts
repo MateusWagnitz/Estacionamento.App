@@ -1,20 +1,20 @@
 import { Carros } from '../../../models/Carros';
-import { VeiculoService } from './../../../services/veiculo.service';
+import { CarroService } from '../../../services/carro.service';
 import { Component, OnInit } from '@angular/core';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-veiculo-delete',
-  templateUrl: './veiculo-delete.component.html',
-  styleUrls: ['./veiculo-delete.component.scss']
+  selector: 'app-carro-delete',
+  templateUrl: './carro-delete.component.html',
+  styleUrls: ['./carro-delete.component.scss']
 })
-export class VeiculoDeleteComponent implements OnInit {
+export class CarroDeleteComponent implements OnInit {
 
-  veiculo: Carros;
+  carro: Carros;
 
   constructor(
-    private veiculoServico: VeiculoService,
+    private carroServico: CarroService,
     private mensagemServico: MensagemService,
     private router: Router,
     private route: ActivatedRoute
@@ -22,14 +22,14 @@ export class VeiculoDeleteComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.veiculoServico.getById(id).subscribe((veiculo) => {
-      this.veiculo = veiculo;
+    this.carroServico.getById(id).subscribe((carro) => {
+      this.carro = carro;
     });
   }
 
-  apagarVeiculo(): void {
-    this.veiculoServico.delete(this.veiculo.carroId).subscribe(() => {
-      this.mensagemServico.showMessage('Veículo excluido com sucesso!');
+  apagarCarro(): void {
+    this.carroServico.delete(this.carro.carroId).subscribe(() => {
+      this.mensagemServico.showMessage('Carro excluido com sucesso!');
 
       this.router.navigate(['/carros']);
     });

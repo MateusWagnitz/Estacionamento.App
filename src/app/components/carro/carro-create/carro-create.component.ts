@@ -1,6 +1,6 @@
 import { Carros } from '../../../models/Carros';
 import { Component, OnInit } from '@angular/core';
-import { VeiculoService } from 'src/app/services/veiculo.service';
+import { CarroService } from 'src/app/services/carro.service';
 import { Router } from '@angular/router';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { FormControl, Validators } from '@angular/forms';
@@ -11,11 +11,11 @@ interface Carro {
 }
 
 @Component({
-  selector: 'app-veiculo-create',
-  templateUrl: './veiculo-create.component.html',
-  styleUrls: ['./veiculo-create.component.scss']
+  selector: 'app-carro-create',
+  templateUrl: './carro-create.component.html',
+  styleUrls: ['./carro-create.component.scss']
 })
-export class VeiculoCreateComponent implements OnInit {
+export class CarroCreateComponent implements OnInit {
 
   placaControl = new FormControl('', Validators.required);
   marcaControl = new FormControl('', Validators.required);
@@ -52,7 +52,7 @@ export class VeiculoCreateComponent implements OnInit {
   ];
 
   constructor(
-    private veiculoServico: VeiculoService,
+    private carroServico: CarroService,
     private router: Router,
     private mensagemServico: MensagemService
   ) { }
@@ -60,8 +60,8 @@ export class VeiculoCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  cadastrarVeiculo(): void {
-    this.veiculoServico.post(this.carro).subscribe(() => {
+  cadastrarCarro(): void {
+    this.carroServico.post(this.carro).subscribe(() => {
       this.mensagemServico.showMessage('Carro cadastrado com sucesso!');
       this.router.navigate(['/carros']);
     });
