@@ -12,7 +12,7 @@
         <div>
             <mat-form-field appearance="outline">
                 <mat-label>Saida</mat-label>
-                <input matInput type="datetime-local" matInput [(ngModel)]="estacionamento.saida" [ngModelOptions]="{standalone: true}" />
+                <input matInput type="datetime-local" matInput [(ngModel)]="cliente.saida" [ngModelOptions]="{standalone: true}" />
             </mat-form-field>
         </div>
 
@@ -20,14 +20,14 @@
         <div>
             <mat-form-field appearance="outline">
                 <mat-label>Placa</mat-label>
-                <mat-select [(ngModel)]="estacionamento.carroId" name="placa">
+                <mat-select [(ngModel)]="cliente.carroId" name="placa">
                     <mat-option *ngFor="let carro of carros" [value]="carro.carroId"> {{carro.placa}} </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
 
     </form>
-    <button mat-raised-button (click)="cadastrarEstacionamento()" color="primary">Salvar
+    <button mat-raised-button (click)="cadastrarCliente()" color="primary">Salvar
   </button>
 
     <button mat-raised-button (click)="cancelar()">Cancelar</button>

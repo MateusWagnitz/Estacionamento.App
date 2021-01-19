@@ -35,11 +35,11 @@ import { CarroCreateComponent } from './components/carro/carro-create/carro-crea
 import { CarroDeleteComponent } from './components/carro/carro-delete/carro-delete.component';
 import { CarroUpdateComponent } from './components/carro/carro-update/carro-update.component';
 
-import { EstacionamentoComponent } from './views/estacionamento/estacionamento.component';
-import { EstacionamentoReadComponent } from './components/estacionamento/estacionamento-read/estacionamento-read.component';
-import { EstacionamentoCreateComponent } from './components/estacionamento/estacionamento-create/estacionamento-create.component';
-import { EstacionamentoDeleteComponent } from './components/estacionamento/estacionamento-delete/estacionamento-delete.component';
-import { EstacionamentoUpdateComponent } from './components/estacionamento/estacionamento-update/estacionamento-update.component';
+import { ClienteComponent } from './views/cliente/cliente.component';
+import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-read.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { TicketDeleteComponent } from './components/financeiro/ticket-delete/ticket-delete.component';
 import { TicketUpdateComponent } from './components/financeiro/ticket-update/ticket-update.component';
 
@@ -62,11 +62,11 @@ import { TicketUpdateComponent } from './components/financeiro/ticket-update/tic
     CarroDeleteComponent,
     CarroUpdateComponent,
 
-    EstacionamentoComponent,
-    EstacionamentoReadComponent,
-    EstacionamentoCreateComponent,
-    EstacionamentoDeleteComponent,
-    EstacionamentoUpdateComponent,
+    ClienteComponent,
+    ClienteReadComponent,
+    ClienteCreateComponent,
+    ClienteDeleteComponent,
+    ClienteUpdateComponent,
     TicketDeleteComponent,
     TicketUpdateComponent,
   ],

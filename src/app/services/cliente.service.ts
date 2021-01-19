@@ -1,4 +1,4 @@
-import { Estacionamento } from './../models/Estacionamento';
+import { Cliente } from '../models/Cliente';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -9,57 +9,57 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class EstacionamentoService {
+export class ClienteService {
 
-  baseURL = `${environment.mainUrlAPI}estacionamento`;
+  baseURL = `${environment.mainUrlAPI}clientes`;
 
   constructor(
     private http: HttpClient,
     private mensagemServico: MensagemService
   ) { }
 
-  getAll(): Observable<Estacionamento[]> {
-    return this.http.get<Estacionamento[]>(this.baseURL).pipe(
+  getAll(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(this.baseURL).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  getById(id: number): Observable<Estacionamento> {
+  getById(id: number): Observable<Cliente> {
     const url = `${this.baseURL}/${id}`;
-    return this.http.get<Estacionamento>(url).pipe(
+    return this.http.get<Cliente>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  getIdByData(data: Date): Observable<Estacionamento> {
+  getIdByData(data: Date): Observable<Cliente> {
     const url = `${this.baseURL}/${data}`;
-    return this.http.get<Estacionamento>(url).pipe(
+    return this.http.get<Cliente>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  put(estacionamento: Estacionamento): Observable<Estacionamento> {
-    const url = `${this.baseURL}/${estacionamento.id}`;
-    return this.http.put<Estacionamento>(url, estacionamento).pipe(
+  put(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseURL}/${cliente.id}`;
+    return this.http.put<Cliente>(url, cliente).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  post(estacionamento: Estacionamento): Observable<Estacionamento> {
-    console.log(estacionamento);
-    return this.http.post<Estacionamento>(this.baseURL, estacionamento).pipe(
+  post(cliente: Cliente): Observable<Cliente> {
+    console.log(cliente);
+    return this.http.post<Cliente>(this.baseURL, cliente).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  delete(id: number): Observable<Estacionamento> {
+  delete(id: number): Observable<Cliente> {
     const url = `${this.baseURL}/${id}`;
-    return this.http.delete<Estacionamento>(url).pipe(
+    return this.http.delete<Cliente>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -67,7 +67,7 @@ export class EstacionamentoService {
 
   errorHandler(e: any): Observable<any> {
     console.log(e);
-    this.mensagemServico.showMessage('Ocorreu um erro com o módulo Estacionamento!', true);
+    this.mensagemServico.showMessage('Ocorreu um erro com o módulo Cliente!', true);
     return EMPTY;
   }
 

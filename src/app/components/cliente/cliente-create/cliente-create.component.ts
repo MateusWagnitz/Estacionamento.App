@@ -3,25 +3,25 @@ import { FinanceiroService } from '../../../services/financeiro.service';
 import { CarroService } from '../../../services/carro.service';
 import { Financeiro } from 'src/app/models/Financeiro';
 import { Carros } from '../../../models/Carros';
-import { EstacionamentoService } from './../../../services/estacionamento.service';
+import { ClienteService } from '../../../services/cliente.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MensagemService } from 'src/app/services/mensagem.service';
-import { Estacionamento } from 'src/app/models/Estacionamento';
+import { Cliente } from 'src/app/models/Cliente';
 import { formatDate } from '@angular/common';
 
 @Component({
-  selector: 'app-estacionamento-create',
-  templateUrl: './estacionamento-create.component.html',
-  styleUrls: ['./estacionamento-create.component.scss']
+  selector: 'app-cliente-create',
+  templateUrl: './cliente-create.component.html',
+  styleUrls: ['./cliente-create.component.scss']
 })
-export class EstacionamentoCreateComponent implements OnInit {
+export class ClienteCreateComponent implements OnInit {
 
   carros: Carros[];
   financeiro: Financeiro[];
   dataEstrada: Date = new Date();
 
-  estacionamento: Estacionamento = {
+  cliente: Cliente = {
     entrada: null,
     saida: null,
     valorTotal: 0.0,
@@ -29,7 +29,7 @@ export class EstacionamentoCreateComponent implements OnInit {
   };
 
   constructor(
-    private estacionamentoServico: EstacionamentoService,
+    private clienteServico: ClienteService,
     private carroServico: CarroService,
     private financeiroServico: FinanceiroService,
     private router: Router,
@@ -53,15 +53,15 @@ export class EstacionamentoCreateComponent implements OnInit {
     });
   }
 
-  cadastrarEstacionamento(): void {
-    this.estacionamentoServico.post(this.estacionamento).subscribe(() => {
-      this.mensagemServico.showMessage('Estacionamento cadastrado com sucesso!');
-      this.router.navigate(['/estacionamentos']);
+  cadastrarCliente(): void {
+    this.clienteServico.post(this.cliente).subscribe(() => {
+      this.mensagemServico.showMessage('Cliente cadastrado com sucesso!');
+      this.router.navigate(['/clientes']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/estacionamentos']);
+    this.router.navigate(['/clientes']);
   }
 
 

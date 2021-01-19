@@ -14,7 +14,7 @@ export class CarroComponent implements OnInit {
     private headerService: HeaderService
   ) {
     headerService.headerData = {
-      title: 'Tabela de Veículos',
+      title: 'Tabela de Carros',
       icon: 'time_to_leave',
       routeUrl: '/carros'
     };

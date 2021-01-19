@@ -3,28 +3,28 @@ import { Router } from '@angular/router';
 import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
-  selector: 'app-estacionamento',
-  templateUrl: './estacionamento.component.html',
-  styleUrls: ['./estacionamento.component.scss']
+  selector: 'app-cliente',
+  templateUrl: './cliente.component.html',
+  styleUrls: ['./cliente.component.scss']
 })
-export class EstacionamentoComponent implements OnInit {
+export class ClienteComponent implements OnInit {
 
   constructor(
     private router: Router,
     private headerService: HeaderService
   ) {
     headerService.headerData = {
-      title: 'Controle de Estacionamento',
+      title: 'Controle de Cliente',
       icon: 'local_parking',
-      routeUrl: '/estacionamentos'
+      routeUrl: '/clientes'
     };
   }
 
   ngOnInit() {
   }
 
-  novoEstacionamento(): void {
-    this.router.navigate(['/estacionamentos/create']);
+  novoCliente(): void {
+    this.router.navigate(['/clientes/create']);
   }
 
 }

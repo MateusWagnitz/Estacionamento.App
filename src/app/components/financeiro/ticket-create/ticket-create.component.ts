@@ -30,12 +30,12 @@ export class FinanceiroCreateComponent implements OnInit {
   cadastrarTicket(): void {
     this.financeiroServico.post(this.financeiro).subscribe(() => {
       this.mensagemServico.showMessage('Ticket cadastrado com sucesso!');
-      this.router.navigate(['/ticket']);
+      this.router.navigate(['/financeiro']);
     });
   }
 
-  cancelar(): void {
-    this.router.navigate(['/ticket']);
+  Cancelar(): void {
+    this.router.navigate(['/financeiro']);
   }
 
 }

@@ -11,10 +11,10 @@ import { CarroCreateComponent } from './components/carro/carro-create/carro-crea
 import { CarroDeleteComponent } from './components/carro/carro-delete/carro-delete.component';
 import { CarroUpdateComponent } from './components/carro/carro-update/carro-update.component';
 
-import { EstacionamentoComponent } from './views/estacionamento/estacionamento.component';
-import { EstacionamentoCreateComponent } from './components/estacionamento/estacionamento-create/estacionamento-create.component';
-import { EstacionamentoDeleteComponent } from './components/estacionamento/estacionamento-delete/estacionamento-delete.component';
-import { EstacionamentoUpdateComponent } from './components/estacionamento/estacionamento-update/estacionamento-update.component';
+import { ClienteComponent } from './views/cliente/cliente.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,10 +24,10 @@ const routes: Routes = [
   { path: 'carros/create', component: CarroCreateComponent },
   { path: 'carros/delete/:id', component: CarroDeleteComponent },
   { path: 'carros/update/:id', component: CarroUpdateComponent },
-  { path: 'estacionamentos', component : EstacionamentoComponent },
-  { path: 'estacionamentos/create', component: EstacionamentoCreateComponent },
-  { path: 'estacionamentos/delete/:id', component: EstacionamentoDeleteComponent },
-  { path: 'estacionamentos/update/:id', component: EstacionamentoUpdateComponent },
+  { path: 'clientes', component : ClienteComponent },
+  { path: 'clientes/create', component: ClienteCreateComponent },
+  { path: 'clientes/delete/:id', component: ClienteDeleteComponent },
+  { path: 'clientes/update/:id', component: ClienteUpdateComponent },
 ];
 
 @NgModule({

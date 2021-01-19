@@ -1,6 +1,6 @@
 import { Time } from '@angular/common';
 
-export class Estacionamento {
+export class Cliente {
   id?: number;
   entrada: Date;
   saida: Date;

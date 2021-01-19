@@ -14,7 +14,7 @@ export class FinanceiroComponent implements OnInit {
     private headerService: HeaderService
   ) {
     headerService.headerData = {
-      title: 'Tabela de Preços',
+      title: 'Tabela de Tickets',
       icon: 'monetization_on',
       routeUrl: '/financeiro'
     };

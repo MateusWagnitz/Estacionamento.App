@@ -1,8 +1,8 @@
-import { Estacionamento } from 'src/app/models/Estacionamento';
+import { Cliente } from 'src/app/models/Cliente';
 import { Component, OnInit } from '@angular/core';
 import { Carros } from 'src/app/models/Carros';
 import { Financeiro } from 'src/app/models/Financeiro';
-import { EstacionamentoService } from 'src/app/services/estacionamento.service';
+import { ClienteService } from 'src/app/services/cliente.service';
 import { CarroService } from 'src/app/services/carro.service';
 import { FinanceiroService } from 'src/app/services/financeiro.service';
 import { MensagemService } from 'src/app/services/mensagem.service';
@@ -10,21 +10,21 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { formatDate } from '@angular/common';
 
 @Component({
-  selector: 'app-estacionamento-update',
-  templateUrl: './estacionamento-update.component.html',
-  styleUrls: ['./estacionamento-update.component.scss']
+  selector: 'app-cliente-update',
+  templateUrl: './cliente-update.component.html',
+  styleUrls: ['./cliente-update.component.scss']
 })
-export class EstacionamentoUpdateComponent implements OnInit {
+export class ClienteUpdateComponent implements OnInit {
 
   carros: Carros[];
   financeiro: Financeiro[];
-  estacionamento: Estacionamento;
+  cliente: Cliente;
 
   dataSaida: Date = new Date();
   valorHora: number;
 
   constructor(
-    private estacionamentoServico: EstacionamentoService,
+    private clienteServico: ClienteService,
     private carroServico: CarroService,
     private financeiroServico: FinanceiroService,
     private mensagemServico: MensagemService,
@@ -34,9 +34,9 @@ export class EstacionamentoUpdateComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.estacionamentoServico.getById(id).subscribe((estacionamento) => {
-      this.estacionamento = estacionamento;
-      this.estacionamento.saida = this.dataSaida;
+    this.clienteServico.getById(id).subscribe((cliente) => {
+      this.cliente = cliente;
+      this.cliente.saida = this.dataSaida;
 
     });
     this.carregarCarros();
@@ -56,15 +56,15 @@ export class EstacionamentoUpdateComponent implements OnInit {
   }
 
   atualizarFinanceiro(): void {
-    this.estacionamentoServico.put(this.estacionamento).subscribe(() => {
+    this.clienteServico.put(this.cliente).subscribe(() => {
       this.mensagemServico.showMessage('Financeiro atualizado com sucesso!');
 
-      this.router.navigate(['/estacionamentos']);
+      this.router.navigate(['/clientes']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/estacionamentos']);
+    this.router.navigate(['/clientes']);
   }
 
 }

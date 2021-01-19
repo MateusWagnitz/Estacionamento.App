@@ -1,6 +1,6 @@
 <div>
   <mat-card>
-    <mat-card-title>Alterar Estacionamento</mat-card-title>
+    <mat-card-title>Alterar Cliente</mat-card-title>
     <form>
       <div>
         <mat-form-field appearance="outline">
@@ -10,7 +10,7 @@
             type="datetime-local"
             matInput
             placeholder="Entrada"
-            [(ngModel)]="estacionamento.entrada"
+            [(ngModel)]="cliente.entrada"
             name="entrada"
             disabled
           />
@@ -25,7 +25,7 @@
             type="datetime-local"
             matInput
             placeholder="Saida"
-            [(ngModel)]="estacionamento.saida"
+            [(ngModel)]="cliente.saida"
             name="saida"
           />
         </mat-form-field>
@@ -35,7 +35,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Placa</mat-label>
           <mat-select
-            [(ngModel)]="estacionamento.carroId"
+            [(ngModel)]="cliente.carroId"
             name="placa"
             [disabled]="true"
           >
@@ -55,7 +55,7 @@
           <input
             matInput
             placeholder="valorTotal"
-            [(ngModel)]="estacionamento.valorTotal"
+            [(ngModel)]="cliente.valorTotal"
             name="valorTotal"
             disabled
           />
