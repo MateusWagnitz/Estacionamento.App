@@ -41,6 +41,7 @@ import { EstacionamentoCreateComponent } from './components/estacionamento/estac
 import { EstacionamentoDeleteComponent } from './components/estacionamento/estacionamento-delete/estacionamento-delete.component';
 import { EstacionamentoUpdateComponent } from './components/estacionamento/estacionamento-update/estacionamento-update.component';
 import { TicketDeleteComponent } from './components/financeiro/ticket-delete/ticket-delete.component';
+import { TicketUpdateComponent } from './components/financeiro/ticket-update/ticket-update.component';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { TicketDeleteComponent } from './components/financeiro/ticket-delete/tic
     EstacionamentoDeleteComponent,
     EstacionamentoUpdateComponent,
     TicketDeleteComponent,
+    TicketUpdateComponent,
   ],
   imports: [
     BrowserModule,

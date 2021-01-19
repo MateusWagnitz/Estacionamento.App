@@ -42,7 +42,7 @@ export class EstacionamentoCreateComponent implements OnInit {
   }
 
   carregarCarros(): void {
-    this.carroServico.getAll().subscribe(a => {
+    this.carroServico.Get().subscribe(a => {
       this.carros = a;
     });
   }
