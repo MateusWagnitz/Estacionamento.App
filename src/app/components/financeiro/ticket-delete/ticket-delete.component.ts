@@ -13,11 +13,8 @@ import { CarroService } from '../../../services/carro.service';
 })
 export class TicketDeleteComponent implements OnInit {
 
-  financeiro: Financeiro = {
-    horaEntrada: null,
-    horaSaida: null,
-    valorTotal: null,
-  }
+  financeiro: Financeiro = {} as Financeiro;
+
 
   constructor(private financeiroServico: FinanceiroService,
     private mensagemServico: MensagemService,

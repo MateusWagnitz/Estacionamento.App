@@ -11,7 +11,7 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class FinanceiroService {
 
-  baseURL = `${environment.mainUrlAPI}financeiro`;
+  baseURL = `${environment.mainUrlAPI}ticket`;
 
   constructor(
     private http: HttpClient,

@@ -12,11 +12,7 @@ import { FinanceiroService } from 'src/app/services/financeiro.service';
 })
 export class FinanceiroCreateComponent implements OnInit {
 
-  financeiro: Financeiro = {
-    horaEntrada: null,
-    horaSaida: null,
-    valorTotal: null,
-  }
+  financeiro: Financeiro = {} as Financeiro;
 
   constructor(
     private financeiroServico: FinanceiroService,

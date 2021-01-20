@@ -11,7 +11,7 @@ export class TicketReadComponent implements OnInit {
 
   financeiro: Financeiro[];
 
-  displayedColumns = ['TicketId', 'horaEntrada', 'horaSaida', 'valorTotal' ];
+  displayedColumns = ['TicketId', 'valorFinal', 'horaEntrada', 'horaSaida', 'carroId'];
 
   constructor(
     private financeiroServico: FinanceiroService

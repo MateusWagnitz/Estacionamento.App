@@ -17,9 +17,9 @@ export class TicketUpdateComponent implements OnInit {
   financeiro: Financeiro;
 
 
-  horaEntrada: Date = new Date();
-  horaSaida: Date = new Date();
-  valorTotal: number;
+  horaEntrada: string;
+  horaSaida: string;
+  valorFinal: number;
 
   constructor(
     private carroServico: CarroService,
@@ -34,7 +34,7 @@ export class TicketUpdateComponent implements OnInit {
       this.financeiro = financeiro;
       this.financeiro.horaSaida = this.horaSaida;
       this.financeiro.horaSaida = this.horaSaida;
-      this.financeiro.valorTotal = this.valorTotal;
+      this.financeiro.valorFinal = this.valorFinal;
 
     });
     this.carregarCarros();

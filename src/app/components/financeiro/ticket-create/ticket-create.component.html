@@ -1,35 +1,45 @@
 <mat-card>
-    <mat-card-title>Ticket</mat-card-title>
-    <form>
-        <div>
+  <mat-card-title>Ticket</mat-card-title>
+  <form>
 
-            <mat-form-field appearance="outline">
-                <mat-label>Hora de Entrada</mat-label>
-                <input required matInput type="datetime-local" matInput [(ngModel)]="financeiro.horaEntrada" [ngModelOptions]="{standalone: true}">
-                <!-- <mat-datepicker-toggle matSuffix [for]="horaEntrada"></mat-datepicker-toggle>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Placa</mat-label>
+        <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Hora de Entrada</mat-label>
+        <input required matInput type="time" matInput [(ngModel)]="financeiro.horaEntrada"
+          [ngModelOptions]="{standalone: true}">
+        <!-- <mat-datepicker-toggle matSuffix [for]="horaEntrada"></mat-datepicker-toggle>
                 <mat-datepicker #horaEntrada></mat-datepicker> -->
-            </mat-form-field>
-        </div>
+      </mat-form-field>
+    </div>
 
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>Hora de Saída</mat-label>
-                <input required matInput type="datetime-local" matInput [(ngModel)]="financeiro.horaSaida" [ngModelOptions]="{standalone: true}">
-                <!-- <mat-datepicker-toggle matSuffix [for]="horaSaida"></mat-datepicker-toggle>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Hora de Saída</mat-label>
+        <input required matInput type="time" matInput [(ngModel)]="financeiro.horaSaida"
+          [ngModelOptions]="{standalone: true}">
+        <!-- <mat-datepicker-toggle matSuffix [for]="horaSaida"></mat-datepicker-toggle>
                 <mat-datepicker #horaSaida></mat-datepicker> -->
-            </mat-form-field>
-        </div>
+      </mat-form-field>
+    </div>
 
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>Valor Total</mat-label>
-                <input required type="number" matInput [(ngModel)]="financeiro.valorTotal" [ngModelOptions]="{standalone: true}" />
-            </mat-form-field>
-        </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Valor Final</mat-label>
+        <input required type="number" matInput [(ngModel)]="financeiro.valorFinal"
+          [ngModelOptions]="{standalone: true}" />
+      </mat-form-field>
+    </div>
 
-    </form>
-    <button mat-raised-button (click)="cadastrarTicket()" color="primary">Salvar
+  </form>
+  <button mat-raised-button (click)="cadastrarTicket()" color="primary">Salvar
   </button>
 
-    <button mat-raised-button (click)="Cancelar()">Cancelar</button>
+  <button mat-raised-button (click)="Cancelar()">Cancelar</button>
 </mat-card>
