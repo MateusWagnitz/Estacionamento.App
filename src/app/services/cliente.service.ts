@@ -11,7 +11,7 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class ClienteService {
 
-  baseURL = `${environment.mainUrlAPI}clientes`;
+  baseURL = `${environment.mainUrlAPI}cliente`;
 
   constructor(
     private http: HttpClient,
@@ -42,7 +42,7 @@ export class ClienteService {
   }
 
   put(cliente: Cliente): Observable<Cliente> {
-    const url = `${this.baseURL}/${cliente.id}`;
+    const url = `${this.baseURL}/${cliente.clienteId}`;
     return this.http.put<Cliente>(url, cliente).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -50,8 +50,12 @@ export class ClienteService {
   }
 
   post(cliente: Cliente): Observable<Cliente> {
-    console.log(cliente);
-    return this.http.post<Cliente>(this.baseURL, cliente).pipe(
+    //console.log(cliente);
+    return this.http.post<Cliente>(this.baseURL,
+      {
+        cpf: cliente.cpf,
+        nomeCompleto: cliente.nomeCompleto
+      }).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -67,8 +71,13 @@ export class ClienteService {
 
   errorHandler(e: any): Observable<any> {
     console.log(e);
-    this.mensagemServico.showMessage('Ocorreu um erro com o módulo Cliente!', true);
-    return EMPTY;
+    if (e.status === 409)
+    {
+      this.mensagemServico.showMessage('Ocorreu um erro com o módulo Cliente!', true);
+    }else
+    {
+      return EMPTY;
+    }
   }
 
 }

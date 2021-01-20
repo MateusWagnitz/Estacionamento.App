@@ -28,14 +28,14 @@ cliente: Cliente;
   }
 
   apagarCliente(): void {
-    this.clienteServico.delete(this.cliente.id).subscribe(() => {
+    this.clienteServico.delete(this.cliente.clienteId).subscribe(() => {
       this.mensagemServico.showMessage('Cliente excluido com sucesso!');
 
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/cliente']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/clientes']);
+    this.router.navigate(['/cliente']);
   }
 }

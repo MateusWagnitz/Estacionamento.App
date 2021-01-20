@@ -1,17 +1,15 @@
 import { Time } from '@angular/common';
 
 export class Cliente {
-  id?: number;
-  entrada: Date;
-  saida: Date;
-  valorTotal: number;
-  carroId: number;
+  clienteId?: number;
+  cpf: string;
+  nomeCompleto: string;
+  //carroId: number;
 
   constructor(){
-    this.id = 0;
-    this.entrada = null;
-    this.saida = null;
-    this.valorTotal  = 0;
-    this.carroId = 0;
+    this.clienteId = 0;
+    this.cpf = null;
+    this.nomeCompleto = null;
+    //this.carroId = 0;
   }
 }

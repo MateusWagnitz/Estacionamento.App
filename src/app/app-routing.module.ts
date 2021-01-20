@@ -24,10 +24,10 @@ const routes: Routes = [
   { path: 'carros/create', component: CarroCreateComponent },
   { path: 'carros/delete/:id', component: CarroDeleteComponent },
   { path: 'carros/update/:id', component: CarroUpdateComponent },
-  { path: 'clientes', component : ClienteComponent },
-  { path: 'clientes/create', component: ClienteCreateComponent },
-  { path: 'clientes/delete/:id', component: ClienteDeleteComponent },
-  { path: 'clientes/update/:id', component: ClienteUpdateComponent },
+  { path: 'cliente', component : ClienteComponent },
+  { path: 'cliente/create', component: ClienteCreateComponent },
+  { path: 'cliente/delete/:id', component: ClienteDeleteComponent },
+  { path: 'cliente/update/:id', component: ClienteUpdateComponent },
 ];
 
 @NgModule({

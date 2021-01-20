@@ -5,7 +5,7 @@
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Placa</mat-label>
-        <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" />
+        <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" maxlength="7" />
       </mat-form-field>
     </div>
 
@@ -32,7 +32,7 @@
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Valor Final</mat-label>
-        <input required type="number" matInput [(ngModel)]="financeiro.valorFinal"
+        <input required type="number" matInput [(ngModel)]="financeiro.valorFinal" maxlength="6"
           [ngModelOptions]="{standalone: true}" />
       </mat-form-field>
     </div>

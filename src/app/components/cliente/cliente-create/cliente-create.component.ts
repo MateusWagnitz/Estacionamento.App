@@ -18,50 +18,46 @@ import { formatDate } from '@angular/common';
 export class ClienteCreateComponent implements OnInit {
 
   carros: Carros[];
-  financeiro: Financeiro[];
-  dataEstrada: Date = new Date();
+
 
   cliente: Cliente = {
-    entrada: null,
-    saida: null,
-    valorTotal: 0.0,
-    carroId: 0
+    clienteId : null,
+    cpf : null,
+    nomeCompleto : null
   };
 
   constructor(
     private clienteServico: ClienteService,
-    private carroServico: CarroService,
-    private financeiroServico: FinanceiroService,
     private router: Router,
     private mensagemServico: MensagemService,
   ) { }
 
   ngOnInit() {
-    this.carregarTicket();
-    this.carregarCarros();
+    // this.carregarTicket();
+    // this.carregarCarros();
   }
 
-  carregarCarros(): void {
-    this.carroServico.Get().subscribe(a => {
-      this.carros = a;
-    });
-  }
+  // carregarCarros(): void {
+  //   this.carroServico.Get().subscribe(a => {
+  //     this.carros = a;
+  //   });
+  // }
 
-  carregarTicket(): void {
-    this.financeiroServico.getAll().subscribe(a => {
-      this.financeiro = a;
-    });
-  }
+  // carregarTicket(): void {
+  //   this.financeiroServico.getAll().subscribe(a => {
+  //     this.financeiro = a;
+  //   });
+  // }
 
   cadastrarCliente(): void {
     this.clienteServico.post(this.cliente).subscribe(() => {
       this.mensagemServico.showMessage('Cliente cadastrado com sucesso!');
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/cliente']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/clientes']);
+    this.router.navigate(['/cliente']);
   }
 
 

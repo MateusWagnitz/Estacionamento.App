@@ -36,7 +36,6 @@ export class ClienteUpdateComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.clienteServico.getById(id).subscribe((cliente) => {
       this.cliente = cliente;
-      this.cliente.saida = this.dataSaida;
 
     });
     this.carregarCarros();
@@ -59,12 +58,12 @@ export class ClienteUpdateComponent implements OnInit {
     this.clienteServico.put(this.cliente).subscribe(() => {
       this.mensagemServico.showMessage('Financeiro atualizado com sucesso!');
 
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/cliente']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['/clientes']);
+    this.router.navigate(['/cliente']);
   }
 
 }

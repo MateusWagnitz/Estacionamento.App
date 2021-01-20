@@ -16,7 +16,7 @@ export class ClienteComponent implements OnInit {
     headerService.headerData = {
       title: 'Controle de Cliente',
       icon: 'local_parking',
-      routeUrl: '/clientes'
+      routeUrl: '/cliente'
     };
   }
 
@@ -24,7 +24,7 @@ export class ClienteComponent implements OnInit {
   }
 
   novoCliente(): void {
-    this.router.navigate(['/clientes/create']);
+    this.router.navigate(['/cliente/create']);
   }
 
 }

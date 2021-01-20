@@ -1,5 +1,11 @@
+
+
+ .mat-column-clienteId {
+  flex: 0 1 10px;
+}
+
 div {
-    width: 100%;
+    width: 60%;
 }
 
 button {
@@ -12,6 +18,7 @@ table {
 
 .edit {
     margin-right: 10px;
+
 }
 
 .edit>i {
