@@ -11,7 +11,7 @@ export class CarroReadComponent implements OnInit {
 
   carros: Carros[];
 
-  displayedColumns = ['carroId', 'placa', 'marca', 'modelo', 'acoes'];
+  displayedColumns = ['placa', 'marca', 'modelo', 'clienteId', 'carroId'];
 
   constructor(
     private carroServico: CarroService

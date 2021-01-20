@@ -1,13 +1,18 @@
+import { Cliente } from "./Cliente";
+
+
 export class Carros {
   carroId?: number;
   placa: string;
   marca: string;
   modelo: string;
+  clienteId?: number;
 
   constructor (){
     this.carroId = 0;
-    this.placa = '';
-    this.marca = '';
-    this.modelo = '';
+    this.placa = null;
+    this.marca = null;
+    this.modelo = null;
+    this.clienteId = 0;
   }
 }

@@ -22,9 +22,9 @@ export class CarroCreateComponent implements OnInit {
   selectFormControl = new FormControl('', Validators.required);
 
   carro: Carros = {
-    placa: '',
-    marca: '',
-    modelo: ''
+    placa: null,
+    marca: null,
+    modelo: null,
   }
 
   carros: Carro[] = [
