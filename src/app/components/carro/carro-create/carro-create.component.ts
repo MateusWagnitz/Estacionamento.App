@@ -25,6 +25,7 @@ export class CarroCreateComponent implements OnInit {
     placa: null,
     marca: null,
     modelo: null,
+    clienteId: null
   }
 
   carros: Carro[] = [

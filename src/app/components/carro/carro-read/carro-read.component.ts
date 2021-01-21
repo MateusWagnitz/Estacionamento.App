@@ -11,14 +11,15 @@ export class CarroReadComponent implements OnInit {
 
   carros: Carros[];
 
-  displayedColumns = ['placa', 'marca', 'modelo', 'clienteId', 'carroId'];
+  displayedColumns = ['placa', 'marca', 'modelo', 'carroId'];
+  //'clienteId',
 
   constructor(
     private carroServico: CarroService
   ) { }
 
   ngOnInit() {
-    this.carroServico.Get().subscribe(carros => {
+    this.carroServico.getAll().subscribe(carros => {
       this.carros = carros;
       console.log(carros);
     });

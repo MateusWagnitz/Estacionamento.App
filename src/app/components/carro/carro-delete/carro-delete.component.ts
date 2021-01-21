@@ -22,7 +22,7 @@ export class CarroDeleteComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.carroServico.BuscaId(id).subscribe((carro) => {
+    this.carroServico.getById(id).subscribe((carro) => {
       this.carro = carro;
     });
   }

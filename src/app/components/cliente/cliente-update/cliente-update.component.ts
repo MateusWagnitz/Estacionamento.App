@@ -43,7 +43,7 @@ export class ClienteUpdateComponent implements OnInit {
   }
 
   carregarCarros(): void {
-    this.carroServico.Get().subscribe(prob => {
+    this.carroServico.getAll().subscribe(prob => {
       this.carros = prob;
     });
   }
