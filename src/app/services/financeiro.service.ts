@@ -35,7 +35,7 @@ export class FinanceiroService {
 
   put(financeiro: Financeiro): Observable<Financeiro> {
     const url = `${this.baseURL}/${financeiro.ticketId}`;
-    return this.http.put<Financeiro>(url, financeiro).pipe(
+    return this.http.put<Financeiro>(url, financeiro.ticketId).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );

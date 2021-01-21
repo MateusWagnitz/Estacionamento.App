@@ -4,7 +4,7 @@
         <div>
             <mat-form-field appearance="outline">
                 <mat-label>Placa</mat-label>
-                <input [formControl]="placaControl" required matInput [(ngModel)]="carro.placa" />
+                <input [formControl]="placaControl" required matInput [(ngModel)]="carro.placa" maxlength="8" />
                 <mat-error *ngIf="placaControl.hasError('required')">Campo obrigatório</mat-error>
             </mat-form-field>
         </div>
@@ -25,7 +25,8 @@
         <div>
             <mat-form-field appearance="outline">
                 <mat-label>Modelo</mat-label>
-                <input matInput [(ngModel)]="carro.modelo " [ngModelOptions]="{standalone: true}" />
+                <input [formControl]="modeloControl" required matInput [(ngModel)]="carro.modelo"  />
+                <mat-error *ngIf="modeloControl.hasError('required')">Campo obrigatório</mat-error>
             </mat-form-field>
         </div>
 

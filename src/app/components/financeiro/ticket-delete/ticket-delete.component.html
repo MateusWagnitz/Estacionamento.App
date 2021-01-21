@@ -4,7 +4,7 @@
       <form>
           <div>
               <mat-form-field>
-                  <input matInput placeholder="Id" [value]="financeiro.ticketId" name="id" disabled>
+                  <input matInput placeholder="Ticket Id" [value]="financeiro.ticketId" name="ticketId" disabled>
               </mat-form-field>
           </div>
           <div>
@@ -12,16 +12,16 @@
                   <input matInput placeholder="Valor" [value]="financeiro.valorFinal" name="valor" disabled>
               </mat-form-field>
           </div>
-          <!-- <div>
+          <div>
               <mat-form-field>
-                  <input matInput placeholder="Marca" [value]="carro.marca" name="marca" disabled>
+                  <input matInput placeholder="Hora Entrada" [value]="financeiro.horaEntrada" name="horaEntrada" disabled>
               </mat-form-field>
           </div>
           <div>
               <mat-form-field>
-                  <input matInput placeholder="Modelo" [value]="carro.modelo" name="modelo" disabled>
+                  <input matInput placeholder="Hora Saida" [value]="financeiro.horaSaida" name="horaSaida" disabled>
               </mat-form-field>
-          </div> -->
+          </div>
       </form>
       <button mat-raised-button (click)="apagarTicket()" color="warn"> Excluir </button>
 

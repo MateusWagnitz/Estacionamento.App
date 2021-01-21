@@ -19,6 +19,7 @@ export class CarroCreateComponent implements OnInit {
 
   placaControl = new FormControl('', Validators.required);
   marcaControl = new FormControl('', Validators.required);
+  modeloControl = new FormControl('', Validators.required);
   selectFormControl = new FormControl('', Validators.required);
 
   carro: Carros = {

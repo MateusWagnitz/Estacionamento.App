@@ -5,7 +5,7 @@
     <div>
       <mat-form-field appearance="outline">
         <mat-label>Placa</mat-label>
-        <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" maxlength="7" />
+        <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" maxlength="8" />
       </mat-form-field>
     </div>
 
@@ -14,8 +14,7 @@
         <mat-label>Hora de Entrada</mat-label>
         <input required matInput type="time" matInput [(ngModel)]="financeiro.horaEntrada"
           [ngModelOptions]="{standalone: true}">
-        <!-- <mat-datepicker-toggle matSuffix [for]="horaEntrada"></mat-datepicker-toggle>
-                <mat-datepicker #horaEntrada></mat-datepicker> -->
+
       </mat-form-field>
     </div>
 
@@ -24,8 +23,7 @@
         <mat-label>Hora de Saída</mat-label>
         <input required matInput type="time" matInput [(ngModel)]="financeiro.horaSaida"
           [ngModelOptions]="{standalone: true}">
-        <!-- <mat-datepicker-toggle matSuffix [for]="horaSaida"></mat-datepicker-toggle>
-                <mat-datepicker #horaSaida></mat-datepicker> -->
+
       </mat-form-field>
     </div>
 

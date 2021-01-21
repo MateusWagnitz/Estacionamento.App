@@ -7,11 +7,11 @@ import { FinanceiroService } from 'src/app/services/financeiro.service';
   templateUrl: './ticket-read.component.html',
   styleUrls: ['./ticket-read.component.scss']
 })
-export class TicketReadComponent implements OnInit {
+export class FinanceiroReadComponent implements OnInit {
 
   financeiro: Financeiro[];
 
-  displayedColumns = ['TicketId', 'valorFinal', 'horaEntrada', 'horaSaida', 'carroId'];
+  displayedColumns = ['TicketId', 'valorFinal', 'horaEntrada', 'horaSaida', 'carroId', 'acoes'];
 
   constructor(
     private financeiroServico: FinanceiroService

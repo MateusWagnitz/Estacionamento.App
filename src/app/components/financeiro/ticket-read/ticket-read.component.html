@@ -27,6 +27,21 @@
             <td mat-cell *matCellDef="let row">{{row.valorFinal}}</td>
         </ng-container>
 
+
+    <ng-container matColumnDef="acoes">
+      <th style="text-align: center" mat-header-cell *matHeaderCellDef>
+        Ações
+      </th>
+      <td style="text-align: center" mat-cell *matCellDef="let row">
+        <a [routerLink]="['/financeiro/update/', row.ticketId]" class="edit">
+          <button mat-raised-button color="primary">Editar</button>
+        </a>
+        <a [routerLink]="['/financeiro/delete/',row.ticketId]"class="delete">
+          <button mat-raised-button color="warn">Excluir</button>
+        </a>
+      </td>
+    </ng-container>
+
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>

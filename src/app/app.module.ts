@@ -26,8 +26,10 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 
 import { FinanceiroComponent } from './views/financeiro/ticket.component';
-import { TicketReadComponent } from './components/financeiro/ticket-read/ticket-read.component';
+import { FinanceiroReadComponent } from './components/financeiro/ticket-read/ticket-read.component';
 import { FinanceiroCreateComponent } from './components/financeiro/ticket-create/ticket-create.component';
+import { FinanceiroDeleteComponent } from './components/financeiro/ticket-delete/ticket-delete.component';
+import { FinanceiroUpdateComponent } from './components/financeiro/ticket-update/ticket-update.component';
 
 import { CarroComponent } from './views/carro/carro.component';
 import { CarroReadComponent } from './components/carro/carro-read/carro-read.component';
@@ -40,8 +42,6 @@ import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
-import { TicketDeleteComponent } from './components/financeiro/ticket-delete/ticket-delete.component';
-import { TicketUpdateComponent } from './components/financeiro/ticket-update/ticket-update.component';
 
 
 @NgModule({
@@ -53,7 +53,7 @@ import { TicketUpdateComponent } from './components/financeiro/ticket-update/tic
     HomeComponent,
 
     FinanceiroComponent,
-    TicketReadComponent,
+    FinanceiroReadComponent,
     FinanceiroCreateComponent,
 
     CarroComponent,
@@ -67,8 +67,8 @@ import { TicketUpdateComponent } from './components/financeiro/ticket-update/tic
     ClienteCreateComponent,
     ClienteDeleteComponent,
     ClienteUpdateComponent,
-    TicketDeleteComponent,
-    TicketUpdateComponent,
+    FinanceiroDeleteComponent,
+    FinanceiroUpdateComponent,
   ],
   imports: [
     BrowserModule,

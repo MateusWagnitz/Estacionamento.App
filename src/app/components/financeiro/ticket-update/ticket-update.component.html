@@ -2,32 +2,27 @@
   <mat-card>
     <mat-card-title>Alterar Ticket</mat-card-title>
     <form>
+
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Entrada</mat-label>
-          <input
-            matInput
-            type="datetime-local"
-            matInput
-            placeholder="Entrada"
-            [(ngModel)]="financeiro.horaEntrada"
-            name="entrada"
-            disabled
-          />
+          <input matInput type="time" matInput  [(ngModel)]="financeiro.horaEntrada" [ngModelOptions]="{standalone: true}"
+            name="entrada"/>
         </mat-form-field>
       </div>
+
+      <!-- <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" maxlength="8" />
+        </mat-form-field>
+      </div> -->
 
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Saída</mat-label>
-          <input
-            matInput
-            type="datetime-local"
-            matInput
-            placeholder="Saida"
-            [(ngModel)]="financeiro.horaSaida"
-            name="saida"
-          />
+          <input matInput type="time" matInput placeholder="Saida" [(ngModel)]="financeiro.horaSaida"
+            name="saida" />
         </mat-form-field>
       </div>
 
@@ -35,13 +30,7 @@
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Valor Final</mat-label>
-          <input
-            matInput
-            placeholder="valorFinal"
-            [(ngModel)]="financeiro.valorFinal"
-            name="valorFinal"
-            disabled
-          />
+          <input matInput placeholder="Valor Ticket" [(ngModel)]="financeiro.valorFinal" name="valorFinal"/>
         </mat-form-field>
       </div>
     </form>

@@ -11,7 +11,7 @@ import { CarroService } from '../../../services/carro.service';
   templateUrl: './ticket-delete.component.html',
   styleUrls: ['./ticket-delete.component.css']
 })
-export class TicketDeleteComponent implements OnInit {
+export class FinanceiroDeleteComponent implements OnInit {
 
   financeiro: Financeiro = {} as Financeiro;
 
