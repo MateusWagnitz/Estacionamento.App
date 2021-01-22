@@ -2,65 +2,7 @@
   <mat-card>
     <mat-card-title>Alterar Cliente</mat-card-title>
     <form>
-      <!-- <div>
-        <mat-form-field appearance="outline">
-          <mat-label>Entrada</mat-label>
-          <input
-            matInput
-            type="datetime-local"
-            matInput
-            placeholder="Entrada"
-            [(ngModel)]="cliente.entrada"
-            name="entrada"
-            disabled
-          />
-        </mat-form-field>
-      </div>
 
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>Saída</mat-label>
-          <input
-            matInput
-            type="datetime-local"
-            matInput
-            placeholder="Saida"
-            [(ngModel)]="cliente.saida"
-            name="saida"
-          />
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>Placa</mat-label>
-          <mat-select
-            [(ngModel)]="cliente.carroId"
-            name="placa"
-            [disabled]="true"
-          >
-            <mat-option
-              *ngFor="let carro of carros"
-              [value]="carro.placa"
-            >
-              {{ carro.placa }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="outline">
-          <mat-label>Valor Total</mat-label>
-          <input
-            matInput
-            placeholder="valorTotal"
-            [(ngModel)]="cliente.valorTotal"
-            name="valorTotal"
-            disabled
-          />
-        </mat-form-field>
-      </div> -->
     </form>
 
     <button mat-raised-button (click)="atualizarFinanceiro()" color="primary">

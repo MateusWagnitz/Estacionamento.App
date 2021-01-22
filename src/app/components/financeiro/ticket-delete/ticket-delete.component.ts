@@ -3,8 +3,6 @@ import { Financeiro } from 'src/app/models/Financeiro';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MensagemService } from 'src/app/services/mensagem.service';
 import { FinanceiroService } from 'src/app/services/financeiro.service';
-import { CarroService } from '../../../services/carro.service';
-
 
 @Component({
   selector: 'app-ticket-delete',
@@ -20,8 +18,6 @@ export class FinanceiroDeleteComponent implements OnInit {
     private mensagemServico: MensagemService,
     private router: Router,
     private route: ActivatedRoute) {
-
-
 
   }
 

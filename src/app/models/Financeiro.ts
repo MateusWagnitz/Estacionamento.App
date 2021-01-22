@@ -1,4 +1,3 @@
-import { Carros } from "./Carros";
 
 export class Financeiro {
   ticketId?: number;

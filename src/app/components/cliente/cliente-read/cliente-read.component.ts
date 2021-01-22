@@ -11,10 +11,6 @@ export class ClienteReadComponent implements OnInit {
 
   cliente: Cliente[];
 
-  // displayedColumns = ['id', 'placa', 'entradaData', 'entradaHora', 'saidaData', 'saidaHora', 'valorHora', 'valotTotal', 'acoes'];
-
-  // displayedColumns = ['placa', 'entrada', 'saida',  'valorTotal', 'acoes'];
-
   displayedColumns = ['clienteId', 'cpf', 'nomeCompleto'];
 
 
