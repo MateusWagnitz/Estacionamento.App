@@ -1,8 +1,10 @@
-import { Carros } from '../../../models/Carros';
-import { CarroService } from '../../../services/carro.service';
 import { Component, OnInit } from '@angular/core';
-import { MensagemService } from 'src/app/services/mensagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { Carros } from '../../../models/carro.model';
+import { CarroService } from '../../../services/carro.service';
+
+import { MensagemService } from 'src/app/services/mensagem.service';
 
 @Component({
   selector: 'app-carro-delete',

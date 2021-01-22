@@ -1,6 +1,7 @@
-import { CarroService } from '../../../services/carro.service';
-import { Carros } from '../../../models/Carros';
 import { Component, OnInit } from '@angular/core';
+
+import { Carros } from '../../../models/carro.model';
+import { CarroService } from '../../../services/carro.service';
 
 @Component({
   selector: 'app-carro-read',
@@ -20,7 +21,6 @@ export class CarroReadComponent implements OnInit {
   ngOnInit() {
     this.carroServico.getAll().subscribe(carros => {
       this.carros = carros;
-      console.log(carros);
     });
   }
 }

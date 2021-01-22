@@ -1,10 +1,13 @@
-import { Cliente } from '../models/Cliente';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { MensagemService } from './mensagem.service';
+
 import { Observable, EMPTY } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+
+import { environment } from 'src/environments/environment';
+
+import { MensagemService } from './mensagem.service';
+import { Cliente } from '../models/cliente.model';
 
 @Injectable({
   providedIn: 'root'
@@ -50,7 +53,6 @@ export class ClienteService {
   }
 
   post(cliente: Cliente): Observable<Cliente> {
-    console.log(cliente);
     return this.http.post<Cliente>(this.baseURL,
       {
         cpf: cliente.cpf,

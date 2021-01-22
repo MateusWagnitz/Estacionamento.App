@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Financeiro } from 'src/app/models/Financeiro';
-import { Carros } from 'src/app/models/Carros';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MensagemService } from 'src/app/services/mensagem.service';
+
+import { Financeiro } from 'src/app/models/financeiro.model';
 import { FinanceiroService } from 'src/app/services/financeiro.service';
-import { CarroService } from 'src/app/services/carro.service';
+
+import { MensagemService } from 'src/app/services/mensagem.service';
 
 @Component({
   selector: 'app-ticket-update',
@@ -13,12 +13,10 @@ import { CarroService } from 'src/app/services/carro.service';
 })
 export class FinanceiroUpdateComponent implements OnInit {
 
-  //carros: Carros[];
   financeiro: Financeiro = {} as Financeiro
 
-
   constructor(
-    //private carroServico: CarroService,
+
     private financeiroServico: FinanceiroService,
     private mensagemServico: MensagemService,
     private router: Router,
@@ -28,21 +26,10 @@ export class FinanceiroUpdateComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.financeiroServico.getById(id).subscribe((financeiro) => {
 
-
     this.financeiro = financeiro;
-      //this.financeiro.horaSaida = this.horaSaida;
-      // this.financeiro.horaSaida = this.horaSaida;
-      // this.financeiro.valorFinal = this.valorFinal;
-
     });
-    //this.carregarCarros();
-  }
 
-  // carregarCarros(): void {
-  //   this.carroServico.getAll().subscribe(prob => {
-  //     this.carros = prob;
-  //   });
-  // }
+  }
 
   atualizarFinanceiro(): void {
     this.financeiroServico.put(this.financeiro).subscribe(() => {

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Carros } from '../../../models/Carros';
-import { ClienteService } from '../../../services/cliente.service';
-import { Cliente } from 'src/app/models/Cliente';
-import { MensagemService } from 'src/app/services/mensagem.service';
+import { Carros } from '../../../models/carro.model';
 
+import { Cliente } from 'src/app/models/cliente.model';
+import { ClienteService } from '../../../services/cliente.service';
+
+import { MensagemService } from 'src/app/services/mensagem.service';
 
 @Component({
   selector: 'app-cliente-create',
@@ -17,11 +18,7 @@ export class ClienteCreateComponent implements OnInit {
   carros: Carros[];
 
 
-  cliente: Cliente = {
-    clienteId : null,
-    cpf : null,
-    nomeCompleto : null
-  };
+  cliente: Cliente = { } as Cliente;
 
   constructor(
     private clienteServico: ClienteService,

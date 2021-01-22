@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -20,10 +20,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 
-import { HeaderComponent } from './components/template/header/header.component';
-import { FooterComponent } from './components/template/footer/footer.component';
-import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
+import { HeaderComponent } from './components/template/header/header.component';
+import { NavComponent } from './components/template/nav/nav.component';
+import { FooterComponent } from './components/template/footer/footer.component';
 
 import { FinanceiroComponent } from './views/financeiro/ticket.component';
 import { FinanceiroReadComponent } from './components/financeiro/ticket-read/ticket-read.component';

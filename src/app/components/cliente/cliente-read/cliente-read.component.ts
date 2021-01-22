@@ -1,6 +1,7 @@
-import { ClienteService } from '../../../services/cliente.service';
-import { Cliente } from '../../../models/Cliente';
 import { Component, OnInit } from '@angular/core';
+
+import { Cliente } from '../../../models/cliente.model';
+import { ClienteService } from '../../../services/cliente.service';
 
 @Component({
   selector: 'app-cliente-read',
@@ -21,7 +22,6 @@ export class ClienteReadComponent implements OnInit {
   ngOnInit() {
     this.clienteServico.getAll().subscribe(cliente => {
       this.cliente = cliente;
-      console.log(cliente);
     });
   }
 

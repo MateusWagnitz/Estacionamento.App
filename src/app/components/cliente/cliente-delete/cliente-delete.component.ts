@@ -1,8 +1,10 @@
-import { Cliente } from 'src/app/models/Cliente';
 import { Component, OnInit } from '@angular/core';
-import { ClienteService } from 'src/app/services/cliente.service';
-import { MensagemService } from 'src/app/services/mensagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { Cliente } from 'src/app/models/cliente.model';
+import { ClienteService } from 'src/app/services/cliente.service';
+
+import { MensagemService } from 'src/app/services/mensagem.service';
 
 @Component({
   selector: 'app-cliente-delete',

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Financeiro } from 'src/app/models/Financeiro';
+
+import { Financeiro } from 'src/app/models/financeiro.model';
 import { FinanceiroService } from 'src/app/services/financeiro.service';
 
 @Component({
@@ -20,7 +21,6 @@ export class FinanceiroReadComponent implements OnInit {
   ngOnInit() {
     this.financeiroServico.getAll().subscribe(financeiro => {
       this.financeiro = financeiro;
-      console.log(financeiro);
     });
   }
 
